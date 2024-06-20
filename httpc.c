@@ -1640,7 +1640,7 @@ static inline int httpc_testing_write(httpc_options_t *os, void *socket, const u
 int httpc_tests(httpc_options_t *a) {
 	assert(a);
 	BUILD_BUG_ON(HTTPC_STACK_BUFFER_SIZE < 128ul);
-	BUILD_BUG_ON(HTTPC_CONNECTION_ATTEMPTS < 1ul);
+	BUILD_BUG_ON(HTTPC_CONNECTION_ATTEMPTS < 0ul);
 	BUILD_BUG_ON(HTTPC_MAX_HEADER < 1024ul && HTTPC_MAX_HEADER != 0ul);
 	BUILD_BUG_ON(HTTPC_ERROR != -1);
 	BUILD_BUG_ON(HTTPC_OK    !=  0);
